@@ -41,5 +41,5 @@ void Print(List<string> s)
     Console.WriteLine(s[s.Count - 1]);
 }
 
-Print(split("123; 124; aasdas; asda sd"));
+Print(split("123; 124; aasdas; asda sd", "  "));
 double a = Convert.ToDouble(123);

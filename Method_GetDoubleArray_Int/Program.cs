@@ -24,6 +24,7 @@ void PrintArray(int[,] inArray)
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
             Write($" {inArray[i,j]} ");
+            //Write("{0,2:F0} ",inArray[i,j]);
         }
         WriteLine();
     }

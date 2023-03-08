@@ -35,13 +35,13 @@ PrintArray(collection);
 int[,] InverseDoubleArray(int[,] inArray)
 {
     int[,] outArray = new int[inArray.GetLength(1), inArray.GetLength(0)];
-    //int row = inArray.GetLength(0);
-    //int col = inArray.GetLength(1);
-    // if (row != col)
-    // {
-    //      WriteLine("Невозможно инвертировать массив");
-    // }
-    // else
+    int row = inArray.GetLength(0);
+    int col = inArray.GetLength(1);
+    if (row != col)
+    {
+         WriteLine("Невозможно инвертировать массив");
+    }
+    else
 
     for (int i = 0; i < inArray.GetLength(0); i++)
     {
