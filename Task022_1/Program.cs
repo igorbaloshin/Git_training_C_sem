@@ -17,7 +17,7 @@ List<string> split(string s, string s2)
 {
     List<string> result = new List<string>();
     s += s2;
-    string s1 = "";
+    string s1 = ""; // String.Empty;
 
     for (int i = 0; i < s.Length - 1;i++){
         if (s2 == s[i].ToString() + s[i + 1].ToString())

@@ -40,7 +40,7 @@ List<string> split(string s)
 {
     List<string> result = new List<string>();
     s += "; ";
-    string s1 = "";
+    string s1 = ""; //String.Empty;
     for (int i = 0; i < s.Length - 1; i++)
     {
         if ("; " == s[i].ToString() + s[i + 1].ToString())

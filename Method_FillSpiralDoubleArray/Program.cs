@@ -64,7 +64,7 @@ void PrintArray(int[,] inArray)
         for (int j = 0; j < inArray.GetLength(1); j++)
         {
             //Write($" {inArray[i,j]} ");            
-            Write("{0,2:F0} ", inArray[i, j]);
+            Write("{0,3:F0} ", inArray[i, j]);
         }
         WriteLine();
     }
@@ -72,6 +72,6 @@ void PrintArray(int[,] inArray)
 
 
 
-int[,] Array = FillSpiralDoubleArray(5, 7);
+int[,] Array = FillSpiralDoubleArray(9, 14);
 
 PrintArray(Array);
