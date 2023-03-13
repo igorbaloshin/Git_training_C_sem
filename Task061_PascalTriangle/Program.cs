@@ -14,7 +14,8 @@ void PrintTriangle(int n)
     for (int i = 0; i < n; i++)
     {
         // создаём после каждой строки n-i отступов от левой стороны консоли, чем ниже строка, тем меньше отступ
-        for (int c = 0; c <= (n - i); c++) {
+        for (int c = 0; c <= (n - i); c++)
+        {
             Write("  ");
         }
         for (int c = 0; c <= i; c++)
