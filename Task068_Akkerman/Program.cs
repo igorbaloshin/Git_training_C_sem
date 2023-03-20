@@ -12,7 +12,7 @@ int m = int.Parse(ReadLine());
 Write("Введите число n: ");
 int n = int.Parse(ReadLine());
 
-int AkkermanRec(int m, int n)
+double AkkermanRec(double m, double n)
 {
     if(m == 0)
     return n + 1;
