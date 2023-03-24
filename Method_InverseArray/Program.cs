@@ -9,6 +9,23 @@
 
 }
 
+int[] InverseArray(int[] array)
+{
+    int[] arrayresult = new int[array.Length];
+    
+    for(int i = 0; i <= (array.Length)/2; i++)
+    {
+        int temp = array[i];
+        arrayresult[i] = array[array.Length - 1 - i ];
+        arrayresult[array.Length -1 -i] = temp;
+    }
+    return arrayresult;
 
-int[] Collection = GetRandomArray(4, -7, 7);
+}
+int[] Collection = GetRandomArray(5, -7, 7);
 Console.WriteLine(String.Join(", ", Collection));
+int[] InverseCollection = InverseArray(Collection);
+Console.WriteLine(String.Join(", ", InverseCollection));
+
+
+

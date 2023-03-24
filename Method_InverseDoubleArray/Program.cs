@@ -29,7 +29,7 @@ void PrintArray(int[,] inArray)
     }
 }
 
-int[,] collection = GetDoubleArray(3, 6, 0, 10);
+int[,] collection = GetDoubleArray(5, 5, 0, 10);
 PrintArray(collection);
 
 int[,] InverseDoubleArray(int[,] inArray)
