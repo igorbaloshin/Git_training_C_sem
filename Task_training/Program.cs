@@ -33,5 +33,6 @@ while(distance > 0)
 }
 distance_r = timesum * rS;
 
-WriteLine($"{distance_r, 0:F2}");
+WriteLine($"{distance_r, 2:F0}");
+
 WriteLine(k);
