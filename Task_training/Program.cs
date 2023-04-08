@@ -3,32 +3,35 @@ using static System.Console;
 
 Clear();
 
-double S = 65000; // 1 интервал замены масла
-double qV = 1; // скорость появления загрязнений в масле мг/ 1000 км
-double k = 4.0 / 7.0; // доля замещения масла 4 л из 7 л
-double qAv = 0; // средняя концентраци загрязнений за период мг
-int n = 5; // количество замен масла
+double distance = 300;
+double fTS = 50;
+double sTS = 100;
+double rS = 150;
+int train = 2;
+double time = 0;
+double timesum = 0;
+double distance_r = 0;
+int k = 0;
 
-double q1 = 0;
-double q2 = 0;
-double qAv1 = 0;
-
-for (int i = 1; i <= n; i++)
+while(distance > 0)
 {
-    q2 = q1 + qV * S;
-    qAv1 = (q1 + q2) / 2;
-    qAv = (qAv1 + qAv * (i - 1)) / i;
-    q1 = q2 * (1 - k);
-    if (i == 1)
-        S = S - 25000;
-    if (i == 2 || i == 3)
-        S = S - 10000;
-    else
-        S = S;
+    if(train == 2)
+    {
+        time = distance/(sTS + rS);
+        train = 1;
+    }
+    if(train == 1)
+    {
+        time = distance/(fTS + rS);
+        train = 2;
+    }
+    
+    distance = distance - (fTS + sTS) * time;
+    timesum += time;
+    k++;
 
 }
+distance_r = timesum * rS;
 
-WriteLine($"{qAv,0:F0}");
-
-
-
+WriteLine($"{distance_r, 0:F2}");
+WriteLine(k);
